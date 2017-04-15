@@ -138,10 +138,11 @@
 		<div class="row vis-body">
 			<div class="col-md-3 col-md-push-9">
 				<p>La base de datos de Euskadi de InsideAirbnb contiene 2.874 anuncios, de ellos 395 tienen licencia de alojamiento turístico (13.7%). En total se ofertan 11.474 plazas. Hay anuncios de Airbnb en 267 municipios.</p>
-				 <p>Un primer análisis nos muestra que en la mayoría de municipios hay poca o nula oferta de Airbnb y que se concentra sobre todo en las capitales y, en segundo lugar, en los municipios de la costa.</p>
+				<p>Un primer análisis nos muestra que en la mayoría de municipios hay poca o nula oferta de Airbnb y que se concentra sobre todo en las capitales y, en segundo lugar, en los municipios de la costa.</p>
+				<p>Método de conteo: se han contado puntos (anuncios) en polígonos (municipios) <a href="https://github.com/montera34/airbnbeuskadi/wiki/%C2%BFC%C3%B3mo-se-concentra-la-oferta-por-barrios-de-Airbnb%3F">descrito en este manual</a>. Como algunos puntos han sido situados en el mar y fuera del contorno del barrio, dada la imprecisión con la que Airbnb ofrece sus datos, el número de total de anuncios puede ser algo menor que los indicados en los totales de la tabla de más arriba.</p>
 			</div>
 			<div class="col-md-9 col-md-pull-3">
-				<img src="images/municipios-euskadi-n-airbnb.png" class="img-responsive">
+				<figure><img src="images/municipios-euskadi-n-airbnb.png" class="img-responsive"></figure>
 			</div>
 		</div>
 	</section>
@@ -151,39 +152,74 @@
 			<h2 class="col-md-9">Comparativa por barrios en Donostia / San Sebastián, Bilbao y Vitoria-Gasteiz</h2>
 		</header>
 		<div class="row vis-body">
-			<div class="col-md-5">
-				<p class="vis-featured">En Euskadi <span class="vis-big">8 de los 10 barrios con más anuncios de Airbnb</span><br> por número de viviendas están en Donostia.</p>
-				<p>Dado que la mayor cantidad de anuncios de Airbnb se encuentra en las grandes ciudades (el 62% está en las tres capitales) nos parece más interesante y adecuado estudiar cómo se distribuye la oferta en cada unos barrios. Los anuncios de Airbnb se reparten de forma muy desigual, sobre todo se concentran en los barrios más céntricos y turísticos. En vez de mostrar y representar los números totales de anuncios de Airbnb por barrio mostramos los valores relativos respecto el total de viviendas. Esto nos permite comparar barrios de muy distinta densidad de viviendas. Donostia es con diferencia la ciudad que más anuncios tiene y a la vez la que tiene mayores concentraciones de alojamientos de Airbnb por total de vivienda, siendo los barrios de Igeldo, Ategorrieta-Ulia y Centro los que tienen mayores porcentajes de todo Euskadi por encima del 3%.</p>
-				<p><strong>Nota sobre 1 anuncio = 1 vivienda:</strong> es importante reseñar que un anuncio de Airbnb no tiene por qué necesariamente corresponder con una vivienda, ya que dentro de una vivienda puede haber varias habitaciones que se oferten por separado en la web, cada una con un "id" diferente. Sin embargo creemos que la aproximación es válida para una primera aproximación a los datos. </p>
-				<p>Veamos el caso de Donostia: de los 1.219 anuncios en Donostia hay 390 que se publicitan como habitación privada (private room) y que son aproximadamente un tercio de todos los anuncios (para todo Euskadi esta proporción aumenta hasta el 46%). Son ofertados por 235 anfitriones. De media corresponderían 1,65 anuncios por anfitrión, pero la distribución está lejos de ser uniforme.</p>
+			<div class="col-md-6">
+				<p class="vis-featured"><span class="vis-big">8 de los 10 barrios con más anuncios de Airbnb por número de viviendas en Euskadi están en Donostia</span></p>
+				<p>Dado que la mayor cantidad de anuncios de Airbnb se encuentra en las grandes ciudades (el 62% está en las tres capitales) nos parece más interesante y adecuado estudiar cómo se distribuye la oferta en cada unos barrios.</p>
+				<p>Los anuncios de Airbnb se reparten de forma muy desigual, sobre todo se concentran en los barrios más céntricos y turísticos. En vez de mostrar y representar los números totales de anuncios de Airbnb por barrio mostramos los valores relativos respecto el total de viviendas. Esto nos permite comparar barrios de muy distinta densidad de viviendas. Donostia es con diferencia la ciudad que más anuncios tiene y a la vez la que tiene mayores concentraciones de alojamientos de Airbnb por total de vivienda, siendo los barrios de Igeldo, Ategorrieta-Ulia y Centro los que tienen mayores porcentajes de todo Euskadi por encima del 3%.</p>
+				<h4>Nota sobre 1 anuncio = 1 vivienda</h4>
+				<p>Un anuncio de Airbnb no tiene por qué necesariamente corresponder con una vivienda, ya que dentro de una vivienda puede haber varias habitaciones que se oferten por separado en su web, cada una con un "id" diferente. Sin embargo creemos que la aproximación es válida para un primer acercamiento a los datos y poder comparar los valores entre barrios y ciudades.</p>
+				<p>Veamos el caso concreto de Donostia: de los 1.219 anuncios listados en Donostia hay 390 que se publicitan como habitación privada (private room) y que son aproximadamente un tercio de todos los anuncios (para todo Euskadi esta proporción aumenta hasta el 46%). Son ofertados por 235 anfitriones. De media corresponderían 1,65 anuncios por anfitrión, pero la distribución está lejos de ser uniforme.</p>
 				<p>De las 390 habitaciones privadas hay 159 cuyos propietarios tienen solamente un anuncio en Airnb, eso nos permite casi afirmar que al menos esos anuncios corresponden con 159 viviendas que se están usando para alojamiento turístico. Los 231 (390 menos 159) anuncios restantes corresponden a 76 anfitriones (3,03 anuncios por anfitrión de media). Según el cálculo más conservador podríamos decir que los 231 anuncios corresponden en realidad con 76 viviendas lo cual reduciría el total anuncios que corresponden a viviendas en un 13%. Hemos decidido mantener la aproximación 1 anuncio = 1 vivienda, siendo conscientes que los valores podrían suponer que un 10-15% de los anuncios no correspondan con viviendas. Haría falta comparar estos datos con otras ciudades para ver si se mantiene esta proporción y el análisis es correcto.</p>
 			</div>
+			<div class="col-md-6">
+				<figure><img src="images/bar-chart-barrios-capitales-euskadi-por-porcentaje.png" class="img-responsive"></figure>
+			</div>
+		</div>
+		<div class="row vis-body">
+			<div class="col-md-12">
+				<h3>Donostia / San Sebastián</h3>
+			</div>
+		</div>
+		<div class="row vis-body">
+			<div class="col-md-6">
+				<p>La capital guipuzcoana lidera en número de alojamientos de Airbnb y en porcentaje de alojamientos respecto el total de viviendas siendo <strong>los barrios de Igeldo, Ategorrieta-Ulia y Centro los que tienen mayores porcentajes de todo Euskadi por encima del 3%</strong>, seguidos de Miramon-Zorroaga, Gros, y Antiguo con valores en torno al 2%, también entre los 10 primeros de todo Esukadi.</p>
+			</div>
+		</div>
+		<div class="row vis-body">
 			<div class="col-md-7">
-				<img src="images/bar-chart-barrios-capitales-euskadi-por-porcentaje.png" class="img-responsive">
+				<figure><img src="images/donostia-airbnb-porcentaje.png" class="img-responsive"></figure>
+				<a href="https://numeroteca.carto.com/builder/afb48808-1a08-11e7-8d0e-0ecd1babdde5/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B43.287515075916865%2C-2.0446586608886723%5D%2C%22sw%22%3A%5B43.33610358593233%2C-1.9135951995849612%5D%7D%7D">Mapa de densidad de anuncios por barrio en Donostia.</a>
+			</div>
+			<div class="col-md-5">
+				<figure><img src="images/donostia-airbnb-barrios-chart.png" class="img-responsive"></figure>
 			</div>
 		</div>
 		<div class="row vis-body">
-			<div class="col-md-8">
-				<img src="images/bar-chart-barrios-capitales-euskadi-por-ciudad.png" class="img-responsive">
+			<div class="col-md-12">
+				<h3>Bilbao</h3>
 			</div>
 		</div>
 		<div class="row vis-body">
-			<div class="col-md-8">
-				<h3>Donostia</h3>
-				<img src="images/donostia-airbnb-porcentaje.png" class="img-responsive">
-			</div>
-			<div class="col-md-4">
-				<p>La </p>
+			<div class="col-md-6">
+				<p>Bilbao es la segunda ciudad de Euskadi con mayor presencia de alojamientos de Airbnb que se concentran mayoritariamente en los barrios más céntricos en torno al casco viejo, que tiene un 2,28% de alojamientos de Airbnb respecto del total de viviendas. Le siguen los barrios limítrofes, de San Francisco y Bilbao la Vieja con valores en torno al 1%.</p>
 			</div>
 		</div>
 		<div class="row vis-body">
-			<div class="col-md-8">
-				<img src="images/bilbao-airbnb-porcentaje.png" class="img-responsive">
+			<div class="col-md-7">
+				<figure><img src="images/bilbao-airbnb-porcentaje.png" class="img-responsive"></figure>
+				<a href="https://numeroteca.carto.com/builder/afb48808-1a08-11e7-8d0e-0ecd1babdde5/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B43.23476073581176%2C-3.0010700225830083%5D%2C%22sw%22%3A%5B43.28339138405114%2C-2.8700065612792973%5D%7D%7D">Mapa de densidad de anuncios por barrio en Bilbao.</a>
+			</div>
+			<div class="col-md-5">
+				<figure><img src="images/bilbao-airbnb-barrios-chart.png" class="img-responsive"></figure>
 			</div>
 		</div>
 		<div class="row vis-body">
-			<div class="col-md-8">
-				<img src="images/vitoria-airbnb-porcentaje.png" class="img-responsive">
+			<div class="col-md-12">
+				<h3>Vitoria - Gasteiz</h3>
+			</div>
+		</div>
+		<div class="row vis-body">
+			<div class="col-md-6">
+				<p>Con una presencia de Airbnb mucho más baja</p>
+			</div>
+		</div>
+		<div class="row vis-body">
+			<div class="col-md-7">
+				<figure><img src="images/vitoria-airbnb-porcentaje.png" class="img-responsive"></figure>
+				<a href="https://numeroteca.carto.com/builder/afb48808-1a08-11e7-8d0e-0ecd1babdde5/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B42.820776879740635%2C-2.7430629730224614%5D%2C%22sw%22%3A%5B42.8697367707556%2C-2.6119995117187504%5D%7D%7D">Mapa de densidad de anuncios por barrio en Vitoria.</a>
+			</div>
+			<div class="col-md-5">
+				<figure><img src="images/vitoria-airbnb-barrios-chart.png" class="img-responsive"></figure>
 			</div>
 		</div>
 	</section>
@@ -288,9 +324,8 @@
 				</div>
 			</div>
 			<div class="col-md-3">
-				<p>En el gráfico inferior, podemos ver cómo un pequeño número de propietarios representan el 26.4% del total de plazas Airbnb en Donostia. Los anfitriones Top10 acumulan 247 viviendas, mientras que el total de viviendas Airbnb ofertadas en Donosti es de 1.219.</p>
+				<p></p>
 			</div>
-
 		</div>
 	</section>
 
@@ -312,7 +347,7 @@
 		</div>
 		<div class="col-md-3">
 			<p><img src="images/code.logo.png" alt="Logo código" /></p>
-			<p><small>Los datos de Airbnb de Euskadi, obtenidos gracias a Inside Airbnb, pueden descargarse del <a href="https://github.com/montera34/airbnbeuskadi">repositorio del proyecto</a>. El código de este informe está también <a href="https://github.com/montera34/airbnb.donostia">disponible bajo licencia GNU GPL3</a>.</small></p>
+			<p><small>Los datos de Airbnb de Euskadi, obtenidos gracias a Inside Airbnb, pueden descargarse del <a href="https://github.com/montera34/airbnbeuskadi">repositorio del proyecto</a>. El código de este informe está también <a href="https://github.com/montera34/airbnb.euskadi">disponible bajo licencia GNU GPL3</a>.</small></p>
 		</div>
 	</div>
 	</div>
